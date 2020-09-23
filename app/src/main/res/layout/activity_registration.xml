@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".registration">
+
+    <ImageView
+        android:id="@+id/pict1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo" />
+
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pict1"
+        android:layout_marginTop="30dp"></TextView>
+
+
+    <RelativeLayout
+        android:id="@+id/phoneAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview1"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    app:ccp_defaultNameCode="Id" />
+
+                <EditText
+                    android:id="@+id/phoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:backgroundTint="#B6B6B6"
+                    android:hint=""
+                    android:inputType="phone"
+                    android:paddingBottom="1dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/codeText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/phoneAuth"
+        android:layout_margin="25dp"
+        android:backgroundTint="#B6B6B6"
+        android:drawableLeft="@drawable/password"
+        android:drawableTint="@android:color/primary_text_light_nodisable"
+        android:hint="Write you code here..."
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textColor="@android:color/primary_text_light"
+        android:textColorHint="@android:color/secondary_text_light_nodisable"
+        android:visibility="gone" />
+
+    <!--    <in.aabhasjindal.otptextview.OtpTextView-->
+    <!--        android:id="@+id/codeText"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/phoneAuth"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_margin="25dp"-->
+    <!--        app:otp_box_background="@color/colorPrimaryDark"-->
+    <!--        android:textColor="@android:color/primary_text_light"-->
+    <!--        app:height="50dp"-->
+    <!--        app:width="50dp"-->
+    <!--        app:bar_height="1dp"-->
+    <!--        app:bar_enabled="true"-->
+    <!--        app:length="6"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:otp_text_size="24dp"/>-->
+
+    <Button
+        android:id="@+id/continueNextButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/codeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custom_btn"
+        android:text="CONTINUE"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp" />
+
+
+</RelativeLayout>

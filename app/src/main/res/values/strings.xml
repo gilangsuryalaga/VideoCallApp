@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VideoCallApp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_notification">Notification</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_logout">Logout</string>
+</resources>
