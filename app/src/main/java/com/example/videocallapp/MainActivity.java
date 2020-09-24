@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FancyToast.makeText(MainActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true);
 
 
         BottomNavigationView navView = findViewById(R.id.nav_view);

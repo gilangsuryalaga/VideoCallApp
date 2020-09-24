@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rl_design_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_find"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/Biru"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile_image"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image_find"
+            android:layout_marginTop="5dp"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/name_find"
+                android:text="User_Name"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/bio_find"
+                android:text="User_Bio"
+                android:textSize="12dp"
+                android:singleLine="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/name_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

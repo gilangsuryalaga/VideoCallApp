@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_alignParentTop="true"
         android:background="@color/Biru"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_contact"

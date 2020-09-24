@@ -29,6 +29,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.concurrent.TimeUnit;
 
+import es.dmoral.toasty.Toasty;
 import in.aabhasjindal.otptextview.OtpTextView;
 
 public class registration extends AppCompatActivity {

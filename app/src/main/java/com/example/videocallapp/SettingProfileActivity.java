@@ -159,7 +159,7 @@ public class SettingProfileActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     sendUserToMainActivity();
                                     progressDialog.dismiss();
-                                    FancyToast.makeText(SettingProfileActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true);
+                                    FancyToast.makeText(SettingProfileActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
                                 }
                             }
                         });
@@ -175,9 +175,9 @@ public class SettingProfileActivity extends AppCompatActivity {
 
 
         if (getUserName.equals("")) {
-            FancyToast.makeText(this, "Username is empty", Toast.LENGTH_SHORT, FancyToast.ERROR, true);
+            FancyToast.makeText(this, "Username is empty", Toast.LENGTH_SHORT, FancyToast.ERROR, true).show();
         } else if (getUserStatus.equals("")) {
-            FancyToast.makeText(this, "Status is empty", Toast.LENGTH_SHORT, FancyToast.ERROR, true);
+            FancyToast.makeText(this, "Status is empty", Toast.LENGTH_SHORT, FancyToast.ERROR, true).show();
         } else {
             progressDialog.setTitle("Account Settings");
             progressDialog.setMessage("Please wait...");
@@ -194,7 +194,7 @@ public class SettingProfileActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
                         sendUserToMainActivity();
-                        FancyToast.makeText(SettingProfileActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true);
+                        FancyToast.makeText(SettingProfileActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
                     }
                 }
             });
@@ -226,7 +226,7 @@ public class SettingProfileActivity extends AppCompatActivity {
                 });
     }
     private void sendUserToMainActivity(){
-        FancyToast.makeText(SettingProfileActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true);
+        FancyToast.makeText(SettingProfileActivity.this, "Profile has been updated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
 
         Intent intent = new Intent(SettingProfileActivity.this,MainActivity.class);
         startActivity(intent);

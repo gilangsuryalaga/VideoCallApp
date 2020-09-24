@@ -56,7 +56,15 @@ dependencies {
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
 
     //Custom Toast
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
     implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.8'
+
+    //Blurry Effect
+    implementation 'com.github.jgabrielfreitas:BlurImageView:1.0.1'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+
+    //GPU Filter
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
 
 
 
