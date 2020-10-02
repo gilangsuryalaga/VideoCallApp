@@ -40,49 +40,52 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/background_profile_view"
             android:layout_centerHorizontal="true"
-            android:maxLines="2"
             android:layout_marginBottom="25dp"
+            android:maxLines="2"
             android:text="User_name"
             android:textColor="@color/black"
             android:textSize="35dp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/status_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/name_profile"
             android:layout_centerHorizontal="true"
-            android:maxLines="3"
             android:layout_marginBottom="15dp"
-            android:visibility="gone"
+            android:maxLines="3"
             android:text="User_name"
             android:textColor="@color/cardview_shadow_start_color"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:visibility="gone" />
+
         <Button
             android:id="@+id/add_friend"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="50dp"
-            android:textSize="20dp"
-            android:text="Add Friend"
-            android:textStyle="bold"
-            android:textCursorDrawable="@color/Biru"
-            android:textColor="@color/white"
-            android:layout_marginBottom="15dp"
             android:layout_below="@id/name_profile"
-            android:background="@drawable/accept_btn"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/accept_btn"
+            android:text="Add Friend"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/decline_friend"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="50dp"
-            android:paddingTop="5dp"
-            android:textSize="20dp"
-            android:text="Cancel"
-            android:visibility="gone"
-            android:textStyle="bold"
-            android:textCursorDrawable="@color/black"
-            android:textColor="@color/white"
             android:layout_below="@id/add_friend"
-            android:background="@drawable/decline_btn"/>
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/decline_btn"
+            android:paddingTop="5dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

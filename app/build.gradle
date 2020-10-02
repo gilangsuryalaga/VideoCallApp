@@ -66,6 +66,9 @@ dependencies {
     //GPU Filter
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
 
+    //Image Cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
 
 
 }

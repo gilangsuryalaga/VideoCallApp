@@ -2,61 +2,65 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="20dp">
     <RelativeLayout
         android:id="@+id/rl_design2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="15dp"
         android:background="@color/white">
-        <ImageView
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image_contact"
-            android:layout_width="140dp"
-            android:layout_height="190dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
             android:padding="10dp"
-            android:layout_marginRight="15dp"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image" />
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/image_contact"
-            android:padding="10dp">
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/image_contact">
             <TextView
                 android:id="@+id/name_contact"
                 android:text="User_Name"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/bio_contact"
                 android:text="User_Bio"
                 android:textSize="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@id/name_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+        </RelativeLayout>
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/bio_contact">
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
                 <Button
                     android:id="@+id/vidcall_btn"
-                    android:layout_width="150dp"
-                    android:layout_height="43dp"
-                    android:paddingTop="5dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="2dp"
                     android:drawableTop="@drawable/video_call"
                     android:drawableTint="@color/white"
                     android:background="@drawable/accept_btn"/>
             </RelativeLayout>
-        </RelativeLayout>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
