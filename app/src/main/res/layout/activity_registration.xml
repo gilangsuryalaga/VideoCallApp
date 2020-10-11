@@ -11,23 +11,16 @@
         android:id="@+id/pict1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/logo" />
-
-
-    <TextView
-        android:id="@+id/textview1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pict1"
-        android:layout_marginTop="30dp"></TextView>
 
 
     <RelativeLayout
         android:id="@+id/phoneAuth"
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textview1"
+        android:layout_below="@+id/pict1"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:padding="8dp">

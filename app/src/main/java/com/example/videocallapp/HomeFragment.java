@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
     private DatabaseReference contactsRef,usersRef;
     private FirebaseAuth mAuth;
     private String currentUserId;
-    private String userName="", profileImage="",userBio="";
+    private String userName="", profileImage="",userBio="", calledBy="";
     RecyclerView myContactsList;
     ImageView findpeopleBtn;
 
@@ -75,6 +75,10 @@ public class HomeFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
+        checkForReceivingCall();
+
+        validateUser();
+
         FirebaseRecyclerOptions<Contacts> options = new FirebaseRecyclerOptions.Builder<Contacts>()
                 .setQuery(contactsRef.child(currentUserId), Contacts.class)
                 .build();
@@ -97,6 +101,15 @@ public class HomeFragment extends Fragment {
 
                             Picasso.get().load(profileImage).into(holder.userProfile);
                         }
+                        holder.callBtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent callintent = new Intent(getView().getContext(),CallingActivity.class);
+                                callintent.putExtra("visit_user_id", listUserId);
+                                getView().getContext().startActivity(callintent);
+                                getActivity();
+                            }
+                        });
                     }
 
                     @Override
@@ -116,6 +129,50 @@ public class HomeFragment extends Fragment {
         };
         myContactsList.setAdapter(firebaseRecyclerAdapter);
         firebaseRecyclerAdapter.startListening();
+    }
+
+    private void checkForReceivingCall() {
+        usersRef.child(currentUserId)
+                .child("Ringing")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.hasChild("ringing")){
+                            calledBy = snapshot.child("ringing").getValue().toString();
+
+                            Intent callintent = new Intent(getView().getContext(),CallingActivity.class);
+                            callintent.putExtra("visit_user_id", calledBy);
+                            getView().getContext().startActivity(callintent);
+                            getActivity();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+    }
+
+    private void validateUser() {
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        reference.child("users").child(currentUserId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.exists()){
+                    Intent intent = new Intent(getView().getContext(),SettingProfileActivity.class);
+                    getView().getContext().startActivity(intent);
+                    getActivity().finish();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     public static class ContactsViewHolder extends RecyclerView.ViewHolder {

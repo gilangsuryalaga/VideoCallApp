@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.jgabrielfreitas.core.BlurImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_image" />
+
+    <RelativeLayout
+        android:id="@+id/con1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/name_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:maxLines="2"
+            android:text="User_name"
+            android:textColor="#3BFF6C"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_contact"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="Calling..."
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/con2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/make_call"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="90dp"
+            android:src="@drawable/make_call"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/cancel_call"
+            android:layout_width="90dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/cancel_call" />
+
+    </LinearLayout>
+</RelativeLayout>
